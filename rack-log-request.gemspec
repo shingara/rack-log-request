@@ -4,12 +4,12 @@ require "rack-log-request/version"
 
 Gem::Specification.new do |s|
   s.name        = "rack-log-request"
-  s.version     = Rack::Log::Request::VERSION
+  s.version     = Rack::LogRequest::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["TODO: Write your name"]
-  s.email       = ["TODO: Write your email address"]
+  s.authors     = ["Cyril Mougel"]
+  s.email       = ["cyril.mougel@gmail.com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
+  s.summary     = %q{Log in mongoDB all request do with their time to generate it}
   s.description = %q{TODO: Write a gem description}
 
   s.rubyforge_project = "rack-log-request"

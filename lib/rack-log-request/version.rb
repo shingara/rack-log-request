@@ -1,7 +1,5 @@
 module Rack
-  module Log
-    module Request
-      VERSION = "0.0.1"
-    end
+  class LogRequest
+    VERSION = "0.0.1"
   end
 end
