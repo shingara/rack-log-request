@@ -30,10 +30,12 @@ module Rack
 
     def call(env)
       t = Time.now
-      re = @app.call(env)
+      status, headers, response = @app.call(env)
       @mongo_collection.insert({:request => env['REQUEST_URI'],
+                                :status => status,
+                                :size => response.body.size,
                                 :millis => (Time.now - t)*1000})
-      return re
+      return [status, headers, response]
     end
 
   end
