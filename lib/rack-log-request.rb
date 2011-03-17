@@ -33,7 +33,7 @@ module Rack
       status, headers, response = @app.call(env)
       @mongo_collection.insert({:request => env['REQUEST_URI'],
                                 :status => status,
-                                :size => response.body.size,
+                                :size => headers['Content-Length'],
                                 :millis => (Time.now - t)*1000})
       return [status, headers, response]
     end
